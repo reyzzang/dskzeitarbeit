@@ -48,6 +48,7 @@ body {
   background: var(--white);
   line-height: 1.7;
   overflow-x: hidden;
+  padding-top: env(safe-area-inset-top);
 }
 
 img { max-width: 100%; display: block; }
@@ -76,7 +77,9 @@ button { cursor: pointer; font-family: var(--font-body); border: none; backgroun
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--gray-200);
-  transition: box-shadow var(--transition);
+  top: 0;
+  padding-top: env(safe-area-inset-top);
+  height: calc(var(--nav-height) + env(safe-area-inset-top));
 }
 
 .navbar.scrolled {
